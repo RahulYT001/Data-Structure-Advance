@@ -1,10 +1,9 @@
+a = input("Enter your strings with commas for set 1: \n")
+set1 = set(s.strip() for s in a.split(","))
 
-a=input("Enter 1st set of strings with commas in between\n")
-b=input("Enter 2nd set of strings with commas in between\n")
+b = input("Enter your strings with commas for set 2: \n")
+set2 = set(s.strip() for s in b.split(","))
 
-l1 = [s.strip() for s in a.split(",")]
-l2 = [k.strip() for k in b.split(",")]
+difference = set1 - set2
 
-for i in l1:
-    if i not in l2:
-        print(i)
+print(difference)

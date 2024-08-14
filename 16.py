@@ -1,24 +1,24 @@
-def check_asc(l):
-    i=1
-    while i < (len(l)):
-        if l[i]>l[i-1]:
-            i+=1
-        else:
-            return False
-    return True
-           
-def check_desc(l):
-    i=1
-    while i < (len(l)):
-        if l[i]<l[i-1]:
-            i+=1
-        else:
-            return False
-    return True
+l = [1, 2, 4, 5]
 
-l = [1,2,4,5]
-a= check_asc(l)
-b=check_desc(l)
+i = 1
+while i < len(l):
+    if l[i] > l[i-1]:
+        i += 1
+    else:
+        a = False
+        break
+else:
+    a = True
+
+i = 1
+while i < len(l):
+    if l[i] < l[i-1]:
+        i += 1
+    else:
+        b = False
+        break
+else:
+    b = True
 
 if not a and not b:
     print("It is not sorted.")

@@ -1,14 +1,3 @@
-def invert_dict(d):
-    inverted = {}
-    for key, value in d.items():
-        if value in inverted:
-            inverted[value].append(key)
-        else:
-            inverted[value] = [key]
-    return inverted
-
-
-
 my_dict = {
     'a': 1,
     'b': 2,
@@ -17,6 +6,11 @@ my_dict = {
     'e': 2
 }
 
+inverted = {}
+for key, value in my_dict.items():
+    if value in inverted:
+        inverted[value].append(key)
+    else:
+        inverted[value] = [key]
 
-inverted_dict = invert_dict(my_dict)
-print(inverted_dict)  
+print(inverted)
